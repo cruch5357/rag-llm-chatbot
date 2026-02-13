@@ -15,15 +15,6 @@ El proyecto demuestra el uso práctico de LLMs, embeddings y búsqueda semántic
 - HuggingFace Embeddings
 
 
-## Estructura
-rag-llm-chatbot/
-├── app.py # Interfaz del chatbot
-├── ingest.py # Ingesta de documentos
-├── rag.py # Configuración RAG
-├── data/ # Documentos fuente
-└── storage/ # Vector DB persistente
-
-
 ## Ingestar documentos
 1. Copiar archivos TXT, PDF o MD en la carpeta `data/`
 2. Ejecutar: 
@@ -36,7 +27,3 @@ rag-llm-chatbot/
 
 ## Abrir en el navegador:
 http://localhost
-
-
-Licencia: MIT
-Autor: Alonso Cruz
