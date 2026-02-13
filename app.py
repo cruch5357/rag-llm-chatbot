@@ -1,10 +1,10 @@
 import streamlit as st
 from rag import get_index
 
-st.set_page_config(page_title="RAG Chatbot", page_icon="🧠", layout="centered")
+st.set_page_config(page_title="Chatbot RAG - Local", page_icon="💿", layout="centered")
 
 st.title("🧠 RAG Chatbot (Vector DB + LLM)")
-st.caption("Responde usando tus documentos en /data y muestra fuentes.")
+st.caption("Chatbot para tus documentos en  alojados /data. Al encontrar la informacion, reconoce la fuente.")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -18,7 +18,7 @@ for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-prompt = st.chat_input("Pregunta algo sobre tus documentos...")
+prompt = st.chat_input("Pregunta algo sobre tus archivos...")
 
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -32,7 +32,7 @@ if prompt:
         st.markdown(str(response))
 
         # Fuentes (muy importante en un RAG)
-        with st.expander("📌 Fuentes / chunks usados"):
+        with st.expander("Fuentes / docs usados"):
             if hasattr(response, "source_nodes") and response.source_nodes:
                 for i, sn in enumerate(response.source_nodes, start=1):
                     meta = sn.node.metadata or {}

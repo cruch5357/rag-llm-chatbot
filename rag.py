@@ -16,7 +16,11 @@ def build_settings():
     Settings.embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
     # LLM local vía Ollama
-    Settings.llm = Ollama(model="llama3.1", request_timeout=120)
+    Settings.llm = Ollama(
+        model="llama3.2:3b",
+        request_timeout=120,
+        additional_kwargs={"num_ctx": 2048},
+    )
 
 
 def get_index():
