@@ -3,6 +3,8 @@ Chatbot basado en Retrieval-Augmented Generation (RAG) que responde preguntas ut
 
 El proyecto demuestra el uso práctico de LLMs, embeddings y búsqueda semántica en una arquitectura RAG ejecutada localmente.
 
+## Demostracion RAG Chatbot
+![Demo](assets/demo.png)
 
 ## Tecnologías
 - Python
@@ -33,7 +35,7 @@ rag-llm-chatbot/
 
 
 ## Abrir en el navegador:
-http://localhost:8501
+http://localhost
 
 
 Licencia: MIT
